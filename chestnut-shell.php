@@ -33,7 +33,11 @@ define('CHESTNUT_SHELL_SETTING_CHESTNUT_USER', 'chestnut_user');
 define('CHESTNUT_SHELL_SETTING_CHESTNUT_PASSWORD', 'chestnut_password');
 define('TEMPLATE_PATH', 'templates/');
 
-define('CHESTNUT_REQUEST_URL', 'http://127.0.0.1:8000/api');
+define('CHESTNUT_REQUEST_URL', 'http://chestnut.bargetor.com:8000/api');
+// define('CHESTNUT_REQUEST_URL', 'http://127.0.0.1:8000/api');
+
+
+define('CHESTNUT_POST_META_POST_PIC', 'chestnut_post_pic');
 
 
 include_once 'php/chestnut-shell-admin.php';
