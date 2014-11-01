@@ -18,7 +18,7 @@ function chestnut_shell_options() {
           wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
      }
      $template_name = CHESTNUT_SHELL_PLUGIN_PATH . TEMPLATE_PATH . 'chestnut-shell-admin.html';
-     update_chestnut_shell_setting('bargetor_public@sina.com', 'gh_2e5dc0be3128','password');
+     update_chestnut_shell_setting('bargetor_public@sina.com', 'gh_2e5dc0be3128','password', 'bargetor_chestnut');
      $setting = get_option(CHESTNUT_SHELL_SETTING_NAME);
      echo read_html_file($template_name, $setting);
 }
@@ -29,10 +29,11 @@ function init_chestnut_shell_setting(){
     }
 }
 
-function update_chestnut_shell_setting($chestnut_user, $chestnut_wechat_id, $chestnut_password){
+function update_chestnut_shell_setting($chestnut_user, $chestnut_wechat_id, $chestnut_password, $chestnut_wechat_token){
     $setting = array(CHESTNUT_SHELL_SETTING_CHESTNUT_USER => $chestnut_user,
                      CHESTNUT_SHELL_SETTING_CHESTNUT_PASSWORD => $chestnut_password,
-                     CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_ID => $chestnut_wechat_id,);
+                     CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_ID => $chestnut_wechat_id,
+                     CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_TOKEN => $chestnut_wechat_token,);
     delete_option(CHESTNUT_SHELL_SETTING_NAME);
     update_option(CHESTNUT_SHELL_SETTING_NAME, $setting);
 }

@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: chestnut shell
+Plugin Name: 栗子壳
 Plugin URI: http://chestnut.bargetor.com
 Description: chestnut 微信平台 wordpress 插件
 Version: 1.0.0
@@ -25,17 +25,19 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 define('CHESTNUT_SHELL_PLUGIN_PATH', plugin_dir_path(__FILE__));
 
-define('CHESTNUT_SHELL_PLUGIN_NAME', 'chestnut shell');
+define('CHESTNUT_SHELL_PLUGIN_NAME', '栗子壳');
 
 define('CHESTNUT_SHELL_SETTING_NAME', 'chestnut_shell_setting');
 define('CHESTNUT_SHELL_SETTING_CHESTNUT_URL', 'chestnut_url');
 define('CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_ID', 'chestnut_wechat_id');
+define('CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_TOKEN', 'chestnut_wechat_token');
 define('CHESTNUT_SHELL_SETTING_CHESTNUT_USER', 'chestnut_user');
 define('CHESTNUT_SHELL_SETTING_CHESTNUT_PASSWORD', 'chestnut_password');
 define('TEMPLATE_PATH', 'templates/');
 
 define('CHESTNUT_REQUEST_URL', 'http://chestnut.bargetor.com:8000/api');
 // define('CHESTNUT_REQUEST_URL', 'http://127.0.0.1:8000/api');
+// define('CHESTNUT_REQUEST_URL', 'http://bargetor/chestnut_proxy.php');
 
 
 define('CHESTNUT_POST_META_POST_PIC', 'chestnut_post_pic');
