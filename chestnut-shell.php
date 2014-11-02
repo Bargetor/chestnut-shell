@@ -24,6 +24,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 define('CHESTNUT_SHELL_PLUGIN_PATH', plugin_dir_path(__FILE__));
+define('CHESTNUT_BASE_FILE_NAME', basename(__FILE__));
 
 define('CHESTNUT_SHELL_PLUGIN_NAME', '栗子壳');
 
@@ -33,6 +34,7 @@ define('CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_ID', 'chestnut_wechat_id');
 define('CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_TOKEN', 'chestnut_wechat_token');
 define('CHESTNUT_SHELL_SETTING_CHESTNUT_USER', 'chestnut_user');
 define('CHESTNUT_SHELL_SETTING_CHESTNUT_PASSWORD', 'chestnut_password');
+define('CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_ENCODING_AES_KEY', 'chestnut_wechat_encodingAESKey');
 define('TEMPLATE_PATH', 'templates/');
 
 define('CHESTNUT_REQUEST_URL', 'http://chestnut.bargetor.com:8000/api');

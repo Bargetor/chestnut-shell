@@ -1,20 +1,5 @@
 <?php
 
-function read_html_file($file_name, $parser_array = null){
-    $handle = fopen($file_name,'r');
-    $buffer = fread($handle,filesize($file_name));
-    @fclose($buffer);
-
-    //开始查找替换
-    if($parser_array){
-        while(list($key,$value)=each($parser_array)){
-            $k = "{" . $key . "}";
-            $buffer = str_replace($k,$value,$buffer);//这一句是重点，把指定内容替换
-        }
-    }
-    return $buffer;
-}
-
 
 function http_query_get($url, $params){
     $ch = curl_init();
