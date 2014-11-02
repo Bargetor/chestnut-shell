@@ -17,7 +17,7 @@
 </tr>
 <tr>
 <th scope="row"><label for="<?php echo CHESTNUT_SHELL_SETTING_CHESTNUT_PASSWORD ?>">栗子密码</label></th>
-<td><input name="<?php echo CHESTNUT_SHELL_SETTING_CHESTNUT_PASSWORD ?>" type="text" id="<?php echo CHESTNUT_SHELL_SETTING_CHESTNUT_PASSWORD ?>" value="<?php echo $setting[CHESTNUT_SHELL_SETTING_CHESTNUT_PASSWORD]; ?>" class="regular-text code">
+<td><input name="<?php echo CHESTNUT_SHELL_SETTING_CHESTNUT_PASSWORD ?>" type="password" id="<?php echo CHESTNUT_SHELL_SETTING_CHESTNUT_PASSWORD ?>" value="<?php echo $setting[CHESTNUT_SHELL_SETTING_CHESTNUT_PASSWORD]; ?>" class="regular-text code">
 <p class="description">该密码只作为登录栗子的密码，请勿填写微信公众帐号密码</p>
 </td>
 </tr>
