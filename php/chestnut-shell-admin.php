@@ -1,6 +1,8 @@
 <?php
 include_once 'function.php';
 
+$is_update_chestnut_setting = false;
+
 
 /** 第1步：定义添加菜单选项的函数 */
 function chestnut_shell_plugin_menu() {
@@ -33,6 +35,8 @@ function update_post_data(){
     $chestnut_wechat_encodingAESKey = $_POST[CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_ENCODING_AES_KEY];
 
     update_chestnut_shell_setting($chestnut_user, $chestnut_password, $chestnut_wechat_id, $chestnut_wechat_token);
+    global $is_update_chestnut_setting;
+    $is_update_chestnut_setting = true;
 }
 
 function init_chestnut_shell_setting(){
