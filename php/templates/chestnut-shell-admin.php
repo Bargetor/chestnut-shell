@@ -11,7 +11,7 @@
 
 
 <form method="post" action="options-general.php?page=<?php echo CHESTNUT_BASE_FILE_NAME;?>">
-<input type="hidden" name="option_page" value="general"><input type="hidden" name="action" value="update"><input type="hidden" id="_wpnonce" name="_wpnonce" value="4106a2da91"><input type="hidden" name="_wp_http_referer" value="/wp-admin/options-general.php">
+
 <table class="form-table">
 <tbody><tr>
 <th scope="row"><label for="<?php echo CHESTNUT_SHELL_SETTING_CHESTNUT_USER ?>">用户名</label></th>
