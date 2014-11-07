@@ -34,9 +34,16 @@ function update_post_data(){
     $chestnut_wechat_token = $_POST[CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_TOKEN];
     $chestnut_wechat_encodingAESKey = $_POST[CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_ENCODING_AES_KEY];
 
-    update_chestnut_shell_setting($chestnut_user, $chestnut_password, $chestnut_wechat_id, $chestnut_wechat_token);
+    $setting = update_chestnut_shell_setting($chestnut_user, $chestnut_password, $chestnut_wechat_id, $chestnut_wechat_token);
     global $is_update_chestnut_setting;
     $is_update_chestnut_setting = true;
+
+    update_chestnut_user($setting);
+}
+
+function update_chestnut_user($setting){
+    $request_url = CHESTNUT_REQUEST_URL . '?' . 'method=signup';
+    http_query_post($request_url, $setting);
 }
 
 function init_chestnut_shell_setting(){
@@ -52,6 +59,7 @@ function update_chestnut_shell_setting($chestnut_user, $chestnut_password, $ches
                      CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_TOKEN => $chestnut_wechat_token,);
     delete_option(CHESTNUT_SHELL_SETTING_NAME);
     update_option(CHESTNUT_SHELL_SETTING_NAME, $setting);
+    return $setting;
 }
 
 

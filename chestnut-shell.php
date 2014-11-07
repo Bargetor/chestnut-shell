@@ -42,7 +42,7 @@ define('CHESTNUT_REQUEST_URL', 'http://chestnut.bargetor.com:8000/api');
 // define('CHESTNUT_REQUEST_URL', 'http://bargetor/chestnut_proxy.php');
 
 
-define('CHESTNUT_POST_META_POST_PIC', 'chestnut_post_pic');
+define('CHESTNUT_POST_META_POST_PIC', 'post_pic');
 
 
 include_once 'php/chestnut-shell-admin.php';
