@@ -30,15 +30,15 @@ define('CHESTNUT_SHELL_PLUGIN_NAME', '栗子壳');
 
 define('CHESTNUT_SHELL_SETTING_NAME', 'chestnut_shell_setting');
 define('CHESTNUT_SHELL_SETTING_CHESTNUT_URL', 'chestnut_url');
-define('CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_ID', 'chestnut_wechat_id');
-define('CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_TOKEN', 'chestnut_wechat_token');
+
 define('CHESTNUT_SHELL_SETTING_CHESTNUT_USER', 'chestnut_user');
-define('CHESTNUT_SHELL_SETTING_CHESTNUT_PASSWORD', 'chestnut_password');
-define('CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_ENCODING_AES_KEY', 'chestnut_wechat_encodingAESKey');
+
 define('TEMPLATE_PATH', 'templates/');
 
-define('CHESTNUT_REQUEST_URL', 'http://chestnut.bargetor.com:8000/api');
-// define('CHESTNUT_REQUEST_URL', 'http://127.0.0.1:8000/api');
+define('CHESTNUT_URL', 'http://chestnut.bargetor.com:8000/');
+
+// define('CHESTNUT_REQUEST_URL', 'http://chestnut.bargetor.com:8000/api');
+define('CHESTNUT_REQUEST_URL', 'http://127.0.0.1:8000/api');
 // define('CHESTNUT_REQUEST_URL', 'http://bargetor/chestnut_proxy.php');
 
 

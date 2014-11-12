@@ -30,15 +30,13 @@ function update_post_data(){
 
     $chestnut_user = $_POST[CHESTNUT_SHELL_SETTING_CHESTNUT_USER];
     $chestnut_password = $_POST[CHESTNUT_SHELL_SETTING_CHESTNUT_PASSWORD];
-    $chestnut_wechat_id = $_POST[CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_ID];
-    $chestnut_wechat_token = $_POST[CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_TOKEN];
-    $chestnut_wechat_encodingAESKey = $_POST[CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_ENCODING_AES_KEY];
 
-    $setting = update_chestnut_shell_setting($chestnut_user, $chestnut_password, $chestnut_wechat_id, $chestnut_wechat_token);
+    $setting = update_chestnut_shell_setting($chestnut_user);
     global $is_update_chestnut_setting;
     $is_update_chestnut_setting = true;
 
-    update_chestnut_user($setting);
+    //暂时不向服务器请求更新用户，转到直接到网页注册
+    //update_chestnut_user($setting);
 }
 
 function update_chestnut_user($setting){
@@ -52,11 +50,8 @@ function init_chestnut_shell_setting(){
     }
 }
 
-function update_chestnut_shell_setting($chestnut_user, $chestnut_password, $chestnut_wechat_id, $chestnut_wechat_token){
-    $setting = array(CHESTNUT_SHELL_SETTING_CHESTNUT_USER => $chestnut_user,
-                     CHESTNUT_SHELL_SETTING_CHESTNUT_PASSWORD => $chestnut_password,
-                     CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_ID => $chestnut_wechat_id,
-                     CHESTNUT_SHELL_SETTING_CHESTNUT_WECHAT_TOKEN => $chestnut_wechat_token,);
+function update_chestnut_shell_setting($chestnut_user){
+    $setting = array(CHESTNUT_SHELL_SETTING_CHESTNUT_USER => $chestnut_user,);
     delete_option(CHESTNUT_SHELL_SETTING_NAME);
     update_option(CHESTNUT_SHELL_SETTING_NAME, $setting);
     return $setting;
